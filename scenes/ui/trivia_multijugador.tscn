@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsqtwbvsjbp1c"]
+
+[ext_resource type="Script" uid="uid://d38xamyysp0pl" path="res://scripts/trivia/trivia_multijugador.gd" id="1_gq3y2"]
+[ext_resource type="AudioStream" uid="uid://hm0t8heqj7w2" path="res://assets/Sk1.mp3" id="2_s763d"]
+
+[node name="TriviaMultijugador" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gq3y2")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 35.0
+offset_right = 667.0
+offset_bottom = 113.0
+
+[node name="Boton0" type="Button" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 273.0
+offset_right = 332.0
+offset_bottom = 387.0
+
+[node name="Boton1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 280.0
+offset_right = 692.0
+offset_bottom = 394.0
+
+[node name="Boton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 450.0
+offset_right = 341.0
+offset_bottom = 555.0
+
+[node name="Boton3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 431.0
+offset_right = 677.0
+offset_bottom = 554.0
+
+[node name="Boton4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 32.0
+offset_right = 830.0
+offset_bottom = 95.0
+
+[node name="Mensaje" type="Label" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 108.0
+offset_right = 618.0
+offset_bottom = 217.0
+
+[node name="AudioClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_s763d")

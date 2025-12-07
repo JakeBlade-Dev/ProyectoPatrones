@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5sv7xcytj8hh"]
+
+[ext_resource type="Script" uid="uid://nxgy7xh88tqs" path="res://spaceship/Scripts/MainMenu.gd" id="1_wdt2w"]
+[ext_resource type="Texture2D" uid="uid://c2tu8k4q0vmcc" path="res://assets/space.jpg" id="2_c5yu5"]
+[ext_resource type="FontFile" uid="uid://r5e164404gbt" path="res://fonts/static/Nunito-Black.ttf" id="3_mvbiq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0hdx"]
+bg_color = Color(0.662305, 0.504238, 0.909281, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y7o4n"]
+bg_color = Color(0.662745, 0.505882, 0.909804, 1)
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_wdt2w")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 7.0
+offset_top = -1.0
+offset_right = 852.0
+offset_bottom = 641.0
+texture = ExtResource("2_c5yu5")
+
+[node name="Title_Label" type="Label" parent="."]
+visible = false
+offset_left = 137.0
+offset_top = 154.0
+offset_right = 713.0
+offset_bottom = 301.0
+theme_override_fonts/font = ExtResource("3_mvbiq")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InstructionsLabel" type="Label" parent="."]
+visible = false
+offset_left = 430.0
+offset_top = 182.0
+offset_right = 470.0
+offset_bottom = 205.0
+
+[node name="StartButton" type="Button" parent="."]
+custom_minimum_size = Vector2(10, 60)
+offset_left = 321.0
+offset_top = 452.0
+offset_right = 557.0
+offset_bottom = 553.0
+theme_override_fonts/font = ExtResource("3_mvbiq")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_r0hdx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y7o4n")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

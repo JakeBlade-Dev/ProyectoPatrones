@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsbrulp2baif4"]
+
+[ext_resource type="Script" uid="uid://cwwiuep08o53o" path="res://spaceship/Scripts/HUD.gd" id="1_j6i8a"]
+[ext_resource type="PackedScene" uid="uid://d3128k0c4lm0g" path="res://spaceship/scenes/Player.tscn" id="2_pvdj8"]
+[ext_resource type="PackedScene" uid="uid://bkybghovv2xpc" path="res://spaceship/scenes/Enemy.tscn" id="3_rv2kp"]
+[ext_resource type="PackedScene" uid="uid://yxunqh04kwdj" path="res://spaceship/scenes/Bullet.tscn" id="4_clq0x"]
+[ext_resource type="PackedScene" uid="uid://cel8bvy25igh6" path="res://spaceship/scenes/EnemyBullet.tscn" id="5_s7md4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlgmc"]
+
+[node name="Hud" type="Area2D"]
+script = ExtResource("1_j6i8a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mlgmc")
+
+[node name="Player" parent="." instance=ExtResource("2_pvdj8")]
+
+[node name="Enemy" parent="." instance=ExtResource("3_rv2kp")]
+
+[node name="Bullet" parent="." instance=ExtResource("4_clq0x")]
+
+[node name="EnemyBullet" parent="." instance=ExtResource("5_s7md4")]
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LivesLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="GameOverLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

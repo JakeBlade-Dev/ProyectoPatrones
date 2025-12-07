@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkybghovv2xpc"]
+
+[ext_resource type="Script" uid="uid://dkgm68hjllvxc" path="res://spaceship/Scripts/Enemy.gd" id="1_s7pny"]
+[ext_resource type="Texture2D" uid="uid://bpa505cs45vxd" path="res://assets/Spaceshipassets/Space-Invaders-PNG-High-Quality-Image.png" id="1_wld7y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sptse"]
+size = Vector2(57, 43)
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource("1_s7pny")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_sptse")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_wld7y")

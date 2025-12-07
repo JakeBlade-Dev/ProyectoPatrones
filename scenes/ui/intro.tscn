@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://q66jptansr5t"]
+
+[ext_resource type="Script" uid="uid://cbmuq3ujdj8ov" path="res://scripts/ui/intro.gd" id="1_ayt76"]
+[ext_resource type="VideoStream" uid="uid://88oe0n0ifulf" path="res://cinematicas/intro.ogv" id="1_s2ta7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ayt76")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.44, 0.6)
+stream = ExtResource("1_s2ta7")
+autoplay = true

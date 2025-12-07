@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=3 uid="uid://bpin6hrodk3x0"]
+
+[ext_resource type="Script" uid="uid://tg6xqcfj5i48" path="res://scripts/trivia/trivia.gd" id="1_m543f"]
+[ext_resource type="AudioStream" uid="uid://dybpy5nk8qjla" path="res://assets/trivia_song.ogg" id="2_n08wf"]
+[ext_resource type="Texture2D" uid="uid://fen2pocq8dyu" path="res://assets/escenario-luz-azul.png" id="2_p4vtr"]
+[ext_resource type="FontFile" uid="uid://r5e164404gbt" path="res://fonts/static/Nunito-Black.ttf" id="3_45ufe"]
+[ext_resource type="AudioStream" uid="uid://hm0t8heqj7w2" path="res://assets/Sk1.mp3" id="3_muwiu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sqw1"]
+bg_color = Color(0, 0.727768, 0.0893875, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1pvm4"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0.729412, 0.0901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y30uc"]
+bg_color = Color(0.223529, 0, 0.921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubjj7"]
+bg_color = Color(0.223529, 0, 0.921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_olta7"]
+bg_color = Color(0.662745, 0.505882, 0.909804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qgrx"]
+bg_color = Color(0.662745, 0.505882, 0.909804, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 846.0
+offset_bottom = 648.0
+script = ExtResource("1_m543f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 839.0
+offset_bottom = 641.0
+texture = ExtResource("2_p4vtr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 192.0
+offset_right = 728.0
+offset_bottom = 339.0
+theme_override_fonts/font = ExtResource("3_45ufe")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Boton0" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.006
+offset_left = 280.0
+offset_top = 296.0
+offset_right = 600.0
+offset_bottom = 428.112
+theme_override_fonts/font = ExtResource("3_45ufe")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_3sqw1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1pvm4")
+autowrap_mode = 3
+
+[node name="Boton1" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 440.0
+offset_top = 344.0
+offset_right = 760.0
+offset_bottom = 480.0
+theme_override_fonts/font = ExtResource("3_45ufe")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_y30uc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ubjj7")
+autowrap_mode = 3
+
+[node name="Boton4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 35.0
+offset_right = 817.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("3_45ufe")
+theme_override_styles/normal = SubResource("StyleBoxFlat_olta7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qgrx")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_n08wf")
+autoplay = true
+parameters/looping = true
+
+[node name="AudioClick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_muwiu")
+volume_db = 15.837
+
+[connection signal="pressed" from="Boton0" to="." method="_on_boton_0_pressed"]
+[connection signal="pressed" from="Boton1" to="." method="_on_boton_1_pressed"]
+[connection signal="pressed" from="Boton4" to="." method="_on_boton_3_pressed"]

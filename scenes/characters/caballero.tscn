@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://qmrlw4bgytx0"]
+
+[ext_resource type="Script" uid="uid://c2hlxcko5uigo" path="res://scripts/characters/caballero.cs" id="1_b85wf"]
+[ext_resource type="Texture2D" uid="uid://brwq5ayue63bn" path="res://assets/caballero.png" id="2_b85wf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_awaw6"]
+radius = 16.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0bxaq"]
+radius = 34.0023
+
+[node name="Caballero" type="CharacterBody2D"]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_b85wf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_b85wf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_awaw6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_0bxaq")

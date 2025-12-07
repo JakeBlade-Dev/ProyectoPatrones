@@ -1,0 +1,51 @@
+{
+	"admin": {
+		"admin": true,
+		"attempts": 0.0,
+		"lock_count": 0.0,
+		"locked": false,
+		"password": "admin123"
+	},
+	"jonathan": {
+		"admin": false,
+		"attempts": 0.0,
+		"lock_count": 0.0,
+		"locked": false,
+		"password": "jonathan123"
+	},
+	"josue": {
+		"admin": false,
+		"attempts": 0.0,
+		"lock_count": 1.0,
+		"locked": false,
+		"password": "josue123"
+	},
+	"jugador": {
+		"admin": false,
+		"attempts": 0.0,
+		"lock_count": 0.0,
+		"locked": false,
+		"password": "jugador123"
+	},
+	"jugador2": {
+		"admin": false,
+		"attempts": 0.0,
+		"lock_count": 0.0,
+		"locked": false,
+		"password": "jugador123"
+	},
+	"jugador3": {
+		"admin": false,
+		"attempts": 0.0,
+		"lock_count": 0.0,
+		"locked": false,
+		"password": "jugador123"
+	},
+	"usuario": {
+		"admin": false,
+		"attempts": 0,
+		"lock_count": 0.0,
+		"locked": false,
+		"password": "usuario123"
+	}
+}

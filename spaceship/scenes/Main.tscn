@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwj4h8hq48pm3"]
+
+[ext_resource type="Script" uid="uid://c8nfh6ukxfvve" path="res://spaceship/Scripts/Main.gd" id="1_kkn3c"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_kkn3c")

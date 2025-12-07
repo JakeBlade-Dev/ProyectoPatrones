@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4fm7w2hob1hf"]
+
+[ext_resource type="Script" uid="uid://65ji5a2mdv8t" path="res://multiplayer/trivia_host.gd" id="1"]
+
+[node name="TriviaHost" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="TriviaHost#Label" type="Label" parent="."]
+layout_mode = 0
+text = "Host - Crear sala"
+
+[node name="TriviaHost#VBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+
+[node name="VBox#LineNumeroPreguntas" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 136.0
+offset_right = 576.0
+offset_bottom = 210.0
+placeholder_text = "Número de preguntas por jugador (ej: 10)"
+
+[node name="VBox#Categorias" type="ItemList" parent="."]
+layout_mode = 0
+select_mode = 3
+allow_reselect = true
+
+[node name="VBox#CrearBoton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 276.0
+offset_right = 447.0
+offset_bottom = 343.0
+text = "Crear sala"
+
+[node name="VBox#CloseButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+text = "Cerrar sala"
+
+[node name="VBox#RoomIdLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 72.0
+offset_right = 360.0
+offset_bottom = 95.0
+text = "Room ID: -"
+
+[node name="VBox#PlayersList" type="ItemList" parent="."]
+layout_mode = 0
+
+[node name="VBox#RoomsList" type="ItemList" parent="."]
+layout_mode = 0
+
+[node name="VBox#StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 418.0
+offset_right = 488.0
+offset_bottom = 474.0
+text = "Iniciar partida"
+
+[node name="TriviaHost#Mensaje" type="Label" parent="."]
+layout_mode = 0

@@ -1,0 +1,112 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq8xk3l5m6n7o"]
+
+[ext_resource type="Script" uid="uid://bgu5ouq745c5p" path="res://scripts/characters/astronauta.cs" id="1_astronauta"]
+[ext_resource type="Texture2D" uid="uid://bn0b7inaaxfqd" path="res://assets/astro.png" id="2_m7o03"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_astronauta"]
+radius = 34.0147
+
+[node name="Astronauta" type="CharacterBody2D"]
+script = ExtResource("1_astronauta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_astronauta")
+
+[node name="VisualRepresentation" type="Node2D" parent="."]
+
+[node name="Body" type="ColorRect" parent="VisualRepresentation"]
+visible = false
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.9, 0.9, 0.9, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Helmet" type="ColorRect" parent="VisualRepresentation"]
+visible = false
+offset_left = -22.0
+offset_top = -55.0
+offset_right = 22.0
+offset_bottom = -35.0
+color = Color(0.3, 0.5, 0.8, 0.7)
+metadata/_edit_use_anchors_ = true
+
+[node name="Visor" type="ColorRect" parent="VisualRepresentation"]
+visible = false
+offset_left = -18.0
+offset_top = -52.0
+offset_right = 18.0
+offset_bottom = -38.0
+color = Color(0.1, 0.2, 0.4, 0.9)
+metadata/_edit_use_anchors_ = true
+
+[node name="ArmLeft" type="ColorRect" parent="VisualRepresentation"]
+visible = false
+offset_left = -30.0
+offset_top = -30.0
+offset_right = -20.0
+offset_bottom = 10.0
+color = Color(0.9, 0.9, 0.9, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ArmRight" type="ColorRect" parent="VisualRepresentation"]
+visible = false
+offset_left = 20.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 10.0
+color = Color(0.9, 0.9, 0.9, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="LegLeft" type="ColorRect" parent="VisualRepresentation"]
+visible = false
+offset_left = -15.0
+offset_top = 20.0
+offset_right = -5.0
+offset_bottom = 40.0
+color = Color(0.9, 0.9, 0.9, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="LegRight" type="ColorRect" parent="VisualRepresentation"]
+visible = false
+offset_left = 5.0
+offset_top = 20.0
+offset_right = 15.0
+offset_bottom = 40.0
+color = Color(0.9, 0.9, 0.9, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BackpackOxygen" type="ColorRect" parent="VisualRepresentation"]
+visible = false
+offset_left = -25.0
+offset_top = -25.0
+offset_right = -15.0
+offset_bottom = 5.0
+color = Color(0.7, 0.2, 0.2, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -30.0
+offset_top = -75.0
+offset_right = 30.0
+offset_bottom = -55.0
+text = "🚀"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelText" type="Label" parent="."]
+offset_left = -40.0
+offset_top = 45.0
+offset_right = 40.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.3, 0.6, 1, 1)
+theme_override_font_sizes/font_size = 10
+text = "ASTRONAUTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.09836958, 0.10644532)
+texture = ExtResource("2_m7o03")

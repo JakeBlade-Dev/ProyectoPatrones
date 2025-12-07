@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cel8bvy25igh6"]
+
+[ext_resource type="Script" uid="uid://bx38f830mg2fl" path="res://spaceship/Scripts/EnemyBullet.gd" id="1_i8dd6"]
+[ext_resource type="Texture2D" uid="uid://b8paeknuxl1m" path="res://assets/Spaceshipassets/99396.png" id="1_orqvx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnuhg"]
+
+[node name="EnemyBullet" type="Area2D"]
+script = ExtResource("1_i8dd6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.1415927
+texture = ExtResource("1_orqvx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pnuhg")

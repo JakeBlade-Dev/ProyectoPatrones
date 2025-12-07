@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3128k0c4lm0g"]
+
+[ext_resource type="Texture2D" uid="uid://bxr6eya7v338c" path="res://assets/Spaceshipassets/spaceship-png-icon-8.png" id="1_6cshf"]
+[ext_resource type="Script" uid="uid://bqklvlg0ewehe" path="res://spaceship/Scripts/Player.gd" id="1_wncfs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sv1xy"]
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_wncfs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6cshf")
+
+[node name="ShootTimer" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sv1xy")

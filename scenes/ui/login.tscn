@@ -1,0 +1,166 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl3yp8r5uu2h3"]
+
+[ext_resource type="Script" uid="uid://dqisfqs0h71ai" path="res://scripts/ui/login_controller.gd" id="1_login"]
+
+[node name="Login" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_login")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="TitleLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "INICIAR SESIÓN"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="UsernameContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="UsernameLabel" type="Label" parent="Panel/VBoxContainer/UsernameContainer"]
+layout_mode = 2
+text = "Usuario:"
+
+[node name="UsernameInput" type="LineEdit" parent="Panel/VBoxContainer/UsernameContainer"]
+layout_mode = 2
+placeholder_text = "Ingresa tu usuario"
+
+[node name="PasswordContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="PasswordLabel" type="Label" parent="Panel/VBoxContainer/PasswordContainer"]
+layout_mode = 2
+text = "Contraseña:"
+
+[node name="PasswordInput" type="LineEdit" parent="Panel/VBoxContainer/PasswordContainer"]
+layout_mode = 2
+placeholder_text = "Ingresa tu contraseña"
+secret = true
+
+[node name="LoginButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "INGRESAR"
+
+[node name="MessageLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="AttemptsLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="AdminPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AdminPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="TitleLabel" type="Label" parent="AdminPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "PANEL DE ADMINISTRADOR"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="AdminPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="WelcomeLabel" type="Label" parent="AdminPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Gestión de Usuarios"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AdminPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="UserListContainer" type="VBoxContainer" parent="AdminPanel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="HSeparator2" type="HSeparator" parent="AdminPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonContainer" type="HBoxContainer" parent="AdminPanel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ContinueButton" type="Button" parent="AdminPanel/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "CONTINUAR AL JUEGO"
+
+[node name="LogoutButton" type="Button" parent="AdminPanel/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "CERRAR SESIÓN"
+
+[connection signal="pressed" from="AdminPanel/VBoxContainer/ButtonContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="AdminPanel/VBoxContainer/ButtonContainer/LogoutButton" to="." method="_on_logout_button_pressed"]
